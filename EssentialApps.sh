@@ -4,15 +4,15 @@ while true; do
 echo "==========================================================
         Digite o número do componente a ser instalado:
        
-1 - Ubuntu Tweak          11 - Chrome                   21 - Gimp (Editor de Imgens)  
-2 - Codeblocks            12 - Firefox Aurora           22 - FileZilla (FTP)  
-3 - Atom                  13 - Git & Gitflow            23 - Codecs Multimidia
-4 - Sublime-Text 2        14 - 4K Video Downloader      24 - Bleachbit (Limpeza)
-5 - VLC player            15 - qBittorrent              25 - Steam (Games)
-6 - Ubuntu CClear         16 - Wine                     26 - Spotify (Music Online)
-7 - Netbeans              17 - 7Zip                     27 - WPS Office
-8 - SimpleScreenRecorder  18 - drush (Drupal)           28 - PlayOnLinux
-9 - Workbeanch            19 - Composer(Gerente Dependências PHP)
+1 - Ubuntu Tweak          11 - Chrome                             21 - Gimp (Editor de Imgens)  
+2 - Codeblocks            12 - Firefox Aurora                     22 - FileZilla (FTP)  
+3 - Atom                  13 - Git & Gitflow                      23 - Codecs Multimidia
+4 - Sublime-Text 2        14 - 4K Video Downloader                24 - Bleachbit (Limpeza)
+5 - VLC player            15 - qBittorrent                        25 - Steam (Games)
+6 - Ubuntu CClear         16 - Wine                               26 - Spotify (Music Online)
+7 - Netbeans              17 - 7Zip                               27 - WPS Office
+8 - SimpleScreenRecorder  18 - drush (Drupal)                     28 - PlayOnLinux
+9 - Workbeanch            19 - Composer(Gerente Dependências PHP) 29 - Space View Indicator
 10 - Docker 1.12          20 - DVDStyler 
 
        0 - Sair
@@ -262,7 +262,14 @@ case $opcao in
         sudo apt-get install dpkg
         wget https://www.playonlinux.com/script_files/PlayOnLinux/4.2.10/PlayOnLinux_4.2.10.deb
         sudo dpkg -i PlayOnLinux_4.2.10.deb
-        ;;   
+        ;;
+      
+    29)
+        # Instalar spaceview
+        sudo add-apt-repository ppa:vlijm/spaceview -y
+        sudo apt update 
+        sudo apt install spaceview -y
+        ;;
     0)
         echo "Saindo..."
         exit;;
