@@ -11,7 +11,7 @@ echo "==========================================================
 5 - VLC player            15 - qBittorrent              25 - Steam (Games)
 6 - Ubuntu CClear         16 - Wine                     26 - Spotify (Music Online)
 7 - Netbeans              17 - 7Zip                     27 - WPS Office
-8 - SimpleScreenRecorder  18 - drush (Drupal)
+8 - SimpleScreenRecorder  18 - drush (Drupal)           28 - PlayOnLinux
 9 - Workbeanch            19 - Composer(Gerente Dependências PHP)
 10 - Docker 1.12          20 - DVDStyler 
 
@@ -256,6 +256,13 @@ case $opcao in
         fi
 
         ;;
+    
+    28)
+        # Instalar PlayOnLinux
+        sudo apt-get install dpkg
+        wget https://www.playonlinux.com/script_files/PlayOnLinux/4.2.10/PlayOnLinux_4.2.10.deb
+        sudo dpkg -i PlayOnLinux_4.2.10.deb
+        ;;   
     0)
         echo "Saindo..."
         exit;;
