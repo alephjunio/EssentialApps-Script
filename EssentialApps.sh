@@ -66,7 +66,11 @@ case $opcao in
         sudo apt-get update
         sudo apt-get install ubuntu-cleaner -y
         ;;
-    7)
+    7) 
+        #Instalar NetBeans (IDE)
+        sudo add-apt-repository ppa:vajdics/netbeans-installer -y
+        sudo apt-get update
+        sudo apt install netbeans-installer -y  
         ;;
     8)  
         #instalar o SimpleScreenRecorder
