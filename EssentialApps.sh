@@ -6,11 +6,11 @@ echo "==========================================================
        
 1 - Ubuntu Tweak          11 - Chrome                   21 - Gimp (Editor de Imgens)  
 2 - Codeblocks            12 - Firefox Aurora           22 - FileZilla (FTP)  
-3 - Atom                  13 - Git & Gitflow
-4 - Sublime Text 2        14 - 4K Video Downloader
-5 - VLC player            15 - qBittorrent
-6 - Ubuntu CClear         16 - Wine 
-7 - Netbeans 8.0          17 - 7Zip 
+3 - Atom                  13 - Git & Gitflow            23 - Codecs Multimidia
+4 - Sublime-Text 2        14 - 4K Video Downloader      24 - Bleachbit (Limpeza)
+5 - VLC player            15 - qBittorrent              25 - Steam (Games)
+6 - Ubuntu CClear         16 - Wine                     26 - Spotify (Music Online)
+7 - Netbeans              17 - 7Zip                     27 - WPS Office
 8 - SimpleScreenRecorder  18 - drush (Drupal)
 9 - Workbeanch            19 - Composer(Gerente Dependências PHP)
 10 - Docker 1.12          20 - DVDStyler 
@@ -194,11 +194,68 @@ case $opcao in
         sudo apt-get update
         sudo apt-get install gimp -y
         ;;
-    21) 
+    22) 
         #Instalando o FileZilla
         sudo apt-get install filezilla -y
         ;;
+    23) 
+        #Instalando o Codecs Multimidia
+       sudo apt install ubuntu-restricted-extras -y
+        ;;
+    24) 
+        #Instalando o Bleachbit  Limpeza Sistema
+       sudo apt install bleachbit -y
+        ;;
+    25) 
+        #Instalando o Steam (Games)
+        sudo apt-get install dpkg
+        wget http://repo.steampowered.com/steam/archive/precise/steam_latest.deb
+        sudo dpkg -i steam_latest.deb
+        ;;
+        
+     26)
+        # Instalar Spotify 
+        sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys BBEBDCB318AD50EC6865090613B00F1FD2C19886 && echo deb http://repository.spotify.com stable non-free | sudo tee /etc/apt/sources.list.d/spotify.list 
+        sudo apt-get update 
+        sudo apt-get install spotify-client -y
+        ;;
+        
+       27) 
+    
+        echo "==================================================
+            Seu Sistema é 32 bits ou 64 bits
+            1) - 32 bits
+            2) - 64 bits
+=================================================="
+        echo -n "->OPÇÃO:  "
 
+        read version
+
+        if [ -z $version ]; then
+          echo "Você tem de entrar com um parâmetro válido"
+          exit
+        elif [ $version = 1 ]; then
+          
+          sudo apt-get install dpkg
+          wget http://kdl.cc.ksosoft.com/wps-community/download/a21/wps-office_10.1.0.5672~a21_i386.deb
+          sudo dpkg -i wps-office_10.1.0.5672~a21_i386.deb
+          echo " Tradução em PT-BR"
+          echo " Link http://www.mediafire.com/download/36td09x94m2x4vh/wps-office-mui-pt-br_1.1.0-0kaiana1_all.deb "
+          
+        elif [ $version = 2 ]; then
+
+          sudo apt-get install dpkg
+          wget http://kdl.cc.ksosoft.com/wps-community/download/a21/wps-office_10.1.0.5672~a21_amd64.deb
+          sudo dpkg -i wps-office_10.1.0.5672~a21_amd64.deb
+          echo " Tradução em PT-BR"
+          echo " Link http://www.mediafire.com/download/36td09x94m2x4vh/wps-office-mui-pt-br_1.1.0-0kaiana1_all.deb "
+
+
+        else
+          echo "Você tem de entrar com um parâmetro válido"
+        fi
+
+        ;;
     0)
         echo "Saindo..."
         exit;;
