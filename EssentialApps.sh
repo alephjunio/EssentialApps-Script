@@ -4,19 +4,17 @@ while true; do
 echo "==========================================================
         Digite o número do componente a ser instalado:
        
-1 - Ubuntu Tweak          11 - Chrome                             21 - Gimp (Editor de Imgens)  
-2 - Codeblocks            12 - Firefox Aurora                     22 - FileZilla (FTP)  
-3 - Atom                  13 - Git & Gitflow                      23 - Codecs Multimidia
-4 - Sublime-Text 2        14 - 4K Video Downloader                24 - Bleachbit (Limpeza)
-5 - VLC player            15 - qBittorrent                        25 - Steam (Games)
+1 - Ubuntu Tweak          11 - Chrome                             21 - Gimp (Editor de Imgens)    31 - Mixxx (DJ)
+2 - Codeblocks            12 - Firefox Aurora                     22 - FileZilla (FTP)            32 - Audacity 
+3 - Atom                  13 - Git & Gitflow                      23 - Codecs Multimidia          33 - Audio Recorder
+4 - Sublime-Text 2        14 - 4K Video Downloader                24 - Bleachbit (Limpeza)        34 - Kazam Screencaster (Gravar Tela)
+5 - VLC player            15 - qBittorrent                        25 - Steam (Games)              35 - ClipGrab (Downloads)
 6 - Ubuntu CClear         16 - Wine                               26 - Spotify (Music Online)
 7 - Netbeans              17 - 7Zip                               27 - WPS Office
 8 - SimpleScreenRecorder  18 - drush (Drupal)                     28 - PlayOnLinux
 9 - Workbeanch            19 - Composer(Gerente Dependências PHP) 29 - Space View Indicator
-10 - Docker 1.12          20 - DVDStyler 
-
+10 - Docker 1.12          20 - DVDStyler                          30 - Systemback (BACKUP)
        0 - Sair
-
 ==========================================================="
 echo -n "->OPÇÃO:  "
 
@@ -149,9 +147,7 @@ case $opcao in
         fi
 
         ;;
-
-
-        
+       
     15) 
         # Instalar qBittorrent 
         sudo add-apt-repository ppa:qbittorrent-team/qbittorrent-stable -y
@@ -178,9 +174,18 @@ case $opcao in
         ;;
     19) 
         #Instalando Composer 
+        
         # sudo apt-get install composer
-        sudo apt-get install curl php5-cli git -y
-        curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
+        
+        #sudo apt-get install curl php5-cli git -y
+        #curl -sS https://getcomposer.org/installer 
+        #sudo php -- --install-dir=/usr/local/bin --filename=composer
+        
+        sudo apt-get install curl
+        curl -sS https://getcomposer.org/installer
+        sudo mv composer.phar /usr/local/bin/composer
+        
+       
         ;;
     20) 
         #Instalando o DVDStyler
@@ -270,6 +275,43 @@ case $opcao in
         sudo apt update 
         sudo apt install spaceview -y
         ;;
+    30)
+        # Instalar systemback
+        sudo apt-add-repository ppa:nemh/systemback -y
+        sudo apt update 
+        sudo apt-get install systemback -y
+        ;;
+
+     31)
+        # Instalar mixxx
+        sudo apt-get install mixxx -y
+        ;;
+    32)
+        # Instalar Audacity
+        sudo apt-get install audacity -y
+        ;;
+    33)
+        # Instalar audio-recorder
+        sudo apt-add-repository ppa:osmoma/audio-recorder  -y
+        sudo apt-get update 
+        sudo apt-get install audio-recorder -y
+        ;;
+    34)
+        # Instalar kazam Gravação de tela
+        sudo add-apt-repository ppa:kazam-team/stable-series -y
+        sudo apt-get update
+        sudo apt-get install kazam -y
+        ;;
+    35)
+        # O ClipGrab é um programa escrito em GTK para Ubuntu e Linux Mint que tem como proposta ser o mais simples quanto possível.
+        # Basta digitar na busca o título do vídeo que você deseja baixar, dando dois cliques em cima do mesmo na aba de download
+        # é possível escolher a qualidade do vídeo ou se você deseja apenas baixar o MP3.
+
+        sudo add-apt-repository ppa:clipgrab-team/ppa -y
+        sudo apt-get update
+        sudo apt-get install clipgrab -y
+        ;;
+
     0)
         echo "Saindo..."
         exit;;
