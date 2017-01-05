@@ -13,7 +13,7 @@ echo "==========================================================================
 7 - Netbeans               21 - Gimp (Editor de Imgens)              36 - GRUB Customizer
 8 - SimpleScreenRecorder   22 - FileZilla (FTP)                      37 - TRANSMAGEDDON (Conversor Videos)
 9 - Workbeanch             23 - Codecs Multimidia                    38 - ARISTA (Conversor Videos)
-10 - Docker 1.12           24 - Bleachbit (Limpeza)
+10 - Docker 1.12           24 - Bleachbit (Limpeza)                  39 - CURLEW (Conversor Videos)
 11 - Chrome                25 - Steam (Games)
 12 - Firefox Aurora        26 - Spotify (Music Online)
 13 - Git & Gitflow         27 - WPS Office
@@ -35,26 +35,26 @@ fi
 case $opcao in
     1)
         #Instalação de ubuntu-tweak de Personalização do Ubuntu
-        sudo add-apt-repository ppa:tualatrix/next -y
+        sudo add-apt-repository ppa:tualatrix/next
         sudo apt-get update
-        sudo apt-get install ubuntu-tweak -y
+        sudo apt-get install ubuntu-tweak
         ;;
     2)
         #Instalação de IDE CodeBlocks
-        sudo add-apt-repository ppa:pasgui/ppa -y
+        sudo add-apt-repository ppa:pasgui/ppa
         sudo apt-get update
-        sudo apt-get install wx-common build-essential checkinstall cdbs devscripts dh-make fakeroot libxml-parser-perl check avahi-daemon codeblocks -y;;
+        sudo apt-get install wx-common build-essential checkinstall cdbs devscripts dh-make fakeroot libxml-parser-perl check avahi-daemon codeblocks  ;;
     3)
         #Instalação de Editor de texto Atom
-        sudo add-apt-repository ppa:webupd8team/atom -y
+        sudo add-apt-repository ppa:webupd8team/atom
         sudo apt-get update
-        sudo apt-get install atom -y
+        sudo apt-get install atom
         ;;
     4)
         #Instalação de Editor de texto Sublime Text 2
-        sudo add-apt-repository ppa:webupd8team/sublime-text-2 -y
+        sudo add-apt-repository ppa:webupd8team/sublime-text-2
         sudo apt-get update
-        sudo apt-get install sublime-text-2 -y
+        sudo apt-get install sublime-text-2
         ;;
 
     5)
@@ -62,29 +62,29 @@ case $opcao in
 
         sudo add-apt-repository ppa:videolan/stable-daily
         sudo apt-get update
-        sudo apt-get install vlc -y
+        sudo apt-get install vlc
         ;;
     6)
         #Instalação do ccleaner para ubuntu
-        sudo add-apt-repository ppa:gerardpuig/ppa -y
+        sudo add-apt-repository ppa:gerardpuig/ppa
         sudo apt-get update
-        sudo apt-get install ubuntu-cleaner -y
+        sudo apt-get install ubuntu-cleaner
         ;;
     7)
         #Instalar NetBeans (IDE)
-        sudo add-apt-repository ppa:vajdics/netbeans-installer -y
+        sudo add-apt-repository ppa:vajdics/netbeans-installer
         sudo apt-get update
-        sudo apt install netbeans-installer -y
+        sudo apt install netbeans-installer
         ;;
     8)
         #instalar o SimpleScreenRecorder
-        sudo add-apt-repository ppa:maarten-baert/simplescreenrecorder -y
+        sudo add-apt-repository ppa:maarten-baert/simplescreenrecorder
         sudo apt-get update
-        sudo apt-get install simplescreenrecorder -y
+        sudo apt-get install simplescreenrecorder
         ;;
     9)
         #instalação do gerenciador de DB Work-Beach
-        sudo apt-get install mysql-workbench -y
+        sudo apt-get install mysql-workbench
         ;;
     10)
         # Instalação docker (LXC - Containers)
@@ -102,7 +102,7 @@ case $opcao in
 
     11)
         # Instalação do Navegador Chrome
-        sudo apt-get install gdebi -y
+        sudo apt-get install gdebi
         wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
         sudo gdebi google-chrome-stable_current_amd64.deb
         ;;
@@ -110,15 +110,15 @@ case $opcao in
     12)
         #Instalação Navegador Firefox Aurora (Developer)
         sudo apt-get purge firefox
-        sudo add-apt-repository ppa:ubuntu-mozilla-daily/firefox-aurora -y
+        sudo add-apt-repository ppa:ubuntu-mozilla-daily/firefox-aurora
         sudo apt-get update
-        sudo apt-get install firefox -y
+        sudo apt-get install firefox
         ;;
 
     13)
         #Instalação do GIT ( Controle de versão)
         sudo apt-get update
-        sudo apt-get install git git-flow -y
+        sudo apt-get install git git-flow
         ;;
 
     14)
@@ -156,21 +156,21 @@ case $opcao in
 
     15)
         # Instalar qBittorrent
-        sudo add-apt-repository ppa:qbittorrent-team/qbittorrent-stable -y
+        sudo add-apt-repository ppa:qbittorrent-team/qbittorrent-stable
         sudo apt-get update
-        sudo apt-get install qbittorrent -y
+        sudo apt-get install qbittorrent
         ;;
 
     16)
         # Instalar Wine
-        sudo add-apt-repository ppa:ricotz/unstable -y
+        sudo add-apt-repository ppa:ricotz/unstable
         sudo apt-get update
-        sudo apt-get install wine1.8 winetricks -y
+        sudo apt-get install wine1.8 winetricks
         ;;
 
     17)
         # Instalar 7zip
-        sudo apt-get install p7zip p7zip-full -y
+        sudo apt-get install p7zip p7zip-full
         ;;
     18)
         #Instalando / Atualizando Drush no Ubuntu
@@ -183,7 +183,7 @@ case $opcao in
 
         # sudo apt-get install composer
 
-        #sudo apt-get install curl php5-cli git -y
+        #sudo apt-get install curl php5-cli git
         #curl -sS https://getcomposer.org/installer
         #sudo php -- --install-dir=/usr/local/bin --filename=composer
 
@@ -195,27 +195,27 @@ case $opcao in
         ;;
     20)
         #Instalando o DVDStyler
-        sudo add-apt-repository ppa:ubuntuhandbook1/dvdstyler -y
+        sudo add-apt-repository ppa:ubuntuhandbook1/dvdstyler
         sudo apt-get update
-        sudo apt-get install dvdstyler -y
+        sudo apt-get install dvdstyler
         ;;
     21)
         #Instalando o GIMP
-        sudo add-apt-repository ppa:otto-kesselgulasch/gimp -y
+        sudo add-apt-repository ppa:otto-kesselgulasch/gimp
         sudo apt-get update
-        sudo apt-get install gimp -y
+        sudo apt-get install gimp
         ;;
     22)
         #Instalando o FileZilla
-        sudo apt-get install filezilla -y
+        sudo apt-get install filezilla
         ;;
     23)
         #Instalando o Codecs Multimidia
-       sudo apt install ubuntu-restricted-extras -y
+       sudo apt install ubuntu-restricted-extras
         ;;
     24)
         #Instalando o Bleachbit  Limpeza Sistema
-       sudo apt install bleachbit -y
+       sudo apt install bleachbit
         ;;
     25)
         #Instalando o Steam (Games)
@@ -228,7 +228,7 @@ case $opcao in
         # Instalar Spotify
         sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys BBEBDCB318AD50EC6865090613B00F1FD2C19886 && echo deb http://repository.spotify.com stable non-free | sudo tee /etc/apt/sources.list.d/spotify.list
         sudo apt-get update
-        sudo apt-get install spotify-client -y
+        sudo apt-get install spotify-client
         ;;
 
        27)
@@ -277,45 +277,45 @@ case $opcao in
 
     29)
         # Instalar spaceview
-        sudo add-apt-repository ppa:vlijm/spaceview -y
+        sudo add-apt-repository ppa:vlijm/spaceview
         sudo apt update
-        sudo apt install spaceview -y
+        sudo apt install spaceview
         ;;
     30)
         # Instalar systemback
-        sudo apt-add-repository ppa:nemh/systemback -y
+        sudo apt-add-repository ppa:nemh/systemback
         sudo apt update
-        sudo apt-get install systemback -y
+        sudo apt-get install systemback
         ;;
 
      31)
         # Instalar mixxx
-        sudo apt-get install mixxx -y
+        sudo apt-get install mixxx
         ;;
     32)
         # Instalar Audacity
-        sudo apt-get install audacity -y
+        sudo apt-get install audacity
         ;;
     33)
         # Instalar audio-recorder
-        sudo apt-add-repository ppa:osmoma/audio-recorder  -y
+        sudo apt-add-repository ppa:osmoma/audio-recorder
         sudo apt-get update
-        sudo apt-get install audio-recorder -y
+        sudo apt-get install audio-recorder
         ;;
     34)
         # Instalar kazam Gravação de tela
-        sudo add-apt-repository ppa:kazam-team/stable-series -y
+        sudo add-apt-repository ppa:kazam-team/stable-series
         sudo apt-get update
-        sudo apt-get install kazam -y
+        sudo apt-get install kazam
         ;;
     35)
         # O ClipGrab é um programa escrito em GTK para Ubuntu e Linux Mint que tem como proposta ser o mais simples quanto possível.
         # Basta digitar na busca o título do vídeo que você deseja baixar, dando dois cliques em cima do mesmo na aba de download
         # é possível escolher a qualidade do vídeo ou se você deseja apenas baixar o MP3.
 
-        sudo add-apt-repository ppa:clipgrab-team/ppa -y
+        sudo add-apt-repository ppa:clipgrab-team/ppa
         sudo apt-get update
-        sudo apt-get install clipgrab -y
+        sudo apt-get install clipgrab
         ;;
    36)
         # instalar o GRUB Customizer no Ubuntu ou no Linux Mint
@@ -324,26 +324,33 @@ case $opcao in
         # , mudar a resolução, o tempo de espera, o tema, entra outras coisas.
         # Aprenda a instalar o GRUB Customizer, uma ferramenta para você configurar o GRUB graficamente.
 
-        sudo add-apt-repository ppa:danielrichter2007/grub-customizer -y
+        sudo add-apt-repository ppa:danielrichter2007/grub-customizer
         sudo apt-get update
-        sudo apt-get install grub-customizer -y
+        sudo apt-get install grub-customizer
     ;;
    37)
        # O Transmageddon suporta quase todos os formatos de vídeo.
-       # É um conversor de vídeo para Linux baseado em GStreamer (um framework para desenvolvimento de aplicações que lidam 
+       # É um conversor de vídeo para Linux baseado em GStreamer (um framework para desenvolvimento de aplicações que lidam
        # streams multimedia, como áudio e vídeo). Portanto, o objetivo da aplicação é para ajudar as pessoas a converterem
         # seus arquivos, sem ter que recorrer a ferramentas de linha de comando!
         sudo apt-get install transmageddon
     ;;
    38)
-       #Arista é uma ferramenta simples que converte arquivos de vídeo facilmente. 
-       # Ele é oficialmente construído para GNOME. Ele suporta MP4, WebM, Matroska, AVI, Ogg, FLV 
+       #Arista é uma ferramenta simples que converte arquivos de vídeo facilmente.
+       # Ele é oficialmente construído para GNOME. Ele suporta MP4, WebM, Matroska, AVI, Ogg, FLV
        # (codecs de vídeo: H.264 -, VP8, MPEG4 / DivX, MPEG2, Theora, o Flash Video / áudio: AAC, Vorbis, MP3, FLAC, Speex, WAV).
          sudo add-apt-repository ppa:webupd8team/arista
          sudo apt-get update
          sudo apt-get install arista
     ;;
-    
+
+  39)
+        # Curlew é um conversor gratuito para Linux. É escrito em Python e GTK3 e baseado ffmpeg.
+        # Ele é fácil de usar, pois uma interface simples. Além disso, é possível converter mais de 100 formatos diferentes.
+         sudo add-apt-repository ppa:upubuntu-com/multimedia
+         sudo apt-get update
+         sudo apt-get install curlew
+     ;;
 
   0)
         echo "Saindo..."
