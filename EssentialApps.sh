@@ -333,7 +333,7 @@ case $opcao in
        # É um conversor de vídeo para Linux baseado em GStreamer (um framework para desenvolvimento de aplicações que lidam
        # streams multimedia, como áudio e vídeo). Portanto, o objetivo da aplicação é para ajudar as pessoas a converterem
         # seus arquivos, sem ter que recorrer a ferramentas de linha de comando!
-        sudo apt-get install transmageddon
+        sudo apt-get install transmageddon -y
     ;;
   0)
         echo "Saindo..."
