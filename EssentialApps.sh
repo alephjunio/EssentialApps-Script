@@ -11,7 +11,7 @@ echo "==========================================================================
 5 - VLC player             29 - Space View Indicator                 34 - Kazam Screencaster (Gravar Tela)
 6 - Ubuntu CClear          20 - DVDStyler                            35 - ClipGrab (Downloads)
 7 - Netbeans               21 - Gimp (Editor de Imgens)              36 - GRUB Customizer
-8 - SimpleScreenRecorder   22 - FileZilla (FTP)
+8 - SimpleScreenRecorder   22 - FileZilla (FTP)                      37 - Handbrake (Conversor)
 9 - Workbeanch             23 - Codecs Multimidia
 10 - Docker 1.12           24 - Bleachbit (Limpeza)
 11 - Chrome                25 - Steam (Games)
@@ -327,6 +327,16 @@ case $opcao in
         sudo add-apt-repository ppa:danielrichter2007/grub-customizer -y
         sudo apt-get update
         sudo apt-get install grub-customizer -y
+    ;;
+  37)
+        # instalar O Handbrake é uma ferramenta excelente para todo YouTuber especialmente,
+        # ele tem uma capacidade incrível de ripar os vídeos reduzindo drasticamente o seu tamanho 
+        # sem perder muita qualidade, ideal para quem manda os vídeos para o YouTube e não tem uma taxa de upload 
+        # tão boa quanto gostaria.
+
+        sudo add-apt-repository ppa:stebbins/handbrake-releases  -y
+        sudo apt-get update
+        sudo apt install handbrake-gtk -y
     ;;
 
   0)
