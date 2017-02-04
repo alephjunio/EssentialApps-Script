@@ -54,7 +54,7 @@ while true; do
     #Instalação de Editor de texto Sublime Text 2
     sudo add-apt-repository ppa:webupd8team/sublime-text-2 -y
     sudo apt-get update
-    sudo apt-get install sublime-text-2 -y
+    sudo apt-get install sublime-text -y
     ;;
 
     5)
