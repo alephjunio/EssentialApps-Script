@@ -15,7 +15,7 @@ while true; do
   9 - Workbeanch             23 - Codecs Multimidia                    38 - Temas Linux
   10 - Docker 1.12           24 - Bleachbit (Limpeza)                  39 - Icones Linux
   11 - Chrome                25 - Steam (Games)                        40 - Dockins Bars
-  12 - Firefox Aurora        26 - Spotify (Music Online)
+  12 - Firefox Aurora        26 - Spotify (Music Online)               41 - TeamViewer
   13 - Git & Gitflow         27 - WPS Office
   14 - 4K Video Downloader   28 - PlayOnLinux
   15 - qBittorrent           29 - SpaceView
@@ -460,7 +460,12 @@ while true; do
       echo "Opção Invalida"
     fi
     ;;
-
+    40)
+    # Instalar PlayOnLinux
+    sudo apt-get install dpkg -y
+    wget https://downloadus2.teamviewer.com/download/version_12x/teamviewer_12.0.71510_i386.deb
+    sudo dpkg -i teamviewer_12.0.71510_i386.deb
+    ;;
     0)
     echo "Saindo..."
     exit;;
